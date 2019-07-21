@@ -1,0 +1,13 @@
+#微服务端口号配置
+server:
+  port: 8080
+
+#注册中心配置
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    waitTimeInMsWhenSyncEmpty: 5
+  serviceUrl:
+    defaultZone: http://localhost:8761

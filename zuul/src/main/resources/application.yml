@@ -1,0 +1,13 @@
+#微服务端口号配置
+server:
+  port: 8082
+
+#注册中心配置
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
