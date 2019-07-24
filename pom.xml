@@ -17,6 +17,8 @@
         <module>config</module>
         <module>eureka</module>
         <module>zuul</module>
+        <module>xxl-job-admin</module>
+        <module>job-handler</module>
     </modules>
 
 

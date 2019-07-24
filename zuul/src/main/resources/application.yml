@@ -1,6 +1,6 @@
 #微服务端口号配置
 server:
-  port: 8082
+  port: 80
 
 #注册中心配置
 eureka:
@@ -11,3 +11,20 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:8080/eureka/
+
+zuul:
+  prefix: /api
+#  sensitive-headers:
+#    - cookie
+#    - set-cookie
+#  routes:
+#    channel-route:
+#      path: /channel/**
+#      serviceId: app-installment
+
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server

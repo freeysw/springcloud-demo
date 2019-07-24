@@ -1,0 +1,38 @@
+#微服务端口号配置
+server:
+  port: 8083
+
+#注册中心配置
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+# log config
+logging:
+  config: classpath:logback.xml
+
+
+### xxl-job admin address list, such as "http://address" or "http://address01,http://address02"
+xxl:
+  job:
+    admin:
+      addresses: http://localhost/api/xxl-job-admin
+    executor:
+      appname: xxl-job-executor-sample
+      ip:
+      port: 9999
+      logpath: /data/applogs/xxl-job/jobhandler
+      logretentiondays: -1
+    accessToken:
+

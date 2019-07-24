@@ -11,12 +11,12 @@ spring:
       server:
         encrypt:
           enabled: false
-          git:
-            uri: https://github.com/freeysw/conf-repo.git
-            # git 配置文件根目录下目录配置
-            searchPaths: zuul-service
-            username: freeysw
-            password: Ys19900215
+        git:
+          uri: https://github.com/freeysw/conf-repo.git
+          # git 配置文件根目录下目录配置
+#            searchPaths: zuul-service
+          username: freeysw
+          password: Ys19900215
 
 eureka:
   instance:

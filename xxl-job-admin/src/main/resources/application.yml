@@ -1,0 +1,70 @@
+#微服务端口号配置
+server:
+  port: 8082
+
+#注册中心配置
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+  mvc:
+    static-path-pattern: /static/**
+  resources:
+    static-locations: classpath:/static/
+  freemarker:
+    templateLoaderPath: classpath:/templates/
+    suffix: .ftl
+    charset: UTF-8
+    request-context-attribute: request
+    settings:
+      number_format: 0.##########
+  datasource:
+    url: jdbc:mysql://192.168.88.128:3306/xxl_job?Unicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    type: org.apache.tomcat.jdbc.pool.DataSource
+    tomcat:
+      max-wait: 10000
+      max-active: 30
+      test-on-borrow: true
+      validation-query: SELECT 1
+      validation-interval: 30000
+  mail:
+    host: smtp.qq.com
+    port: 25
+    username: xxx@qq.com
+    password: xxx
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+
+### mybatis
+mybatis:
+  mapper-locations: classpath:/mybatis-mapper/*Mapper.xml
+
+
+
+### xxl-job, access token
+xxl:
+  job:
+    accessToken:
+    i18n:
+
