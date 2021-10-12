@@ -15,7 +15,7 @@
     </parent>
 
     <properties>
-        <xxl-job-core.version>2.1.0</xxl-job-core.version>
+        <xxl-job-core.version>2.3.0</xxl-job-core.version>
         <xxl-rpc.version>1.4.1</xxl-rpc.version>
     </properties>
 
